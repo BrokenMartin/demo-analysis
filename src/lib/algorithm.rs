@@ -4,14 +4,31 @@ pub use crate::algorithms::{
     viewangles_180degrees::ViewAngles180Degrees,
     viewangles_to_csv::ViewAnglesToCSV,
     write_to_file::WriteToFile,
-    angle_history::AngleHistory,
-    backtrack::BackTrack,
-    double_tap::DoubleTap,
+     
+    teltta:: {
+        angle_history::AngleHistory,
+        backtrack::BackTrack,
+        double_tap::DoubleTap,
+    },
+
+    fidoo:: {
+        auto_backstab::AutoBackstab,
+        bunnyhop::BunnyHop,
+        invalid_equip_region::InvalidEquipRegion,
+        nospread::NoSpread,
+        psilent4::Psilent4,
+        silent_aim::SilentAim,
+    },
+    
+    
     nocrex:: {
         aimsnap::AimSnap, 
         angle_repeat::AngleRepeat, 
         oob_pitch::OOBPitch,
-    }
+    },
+    
+       
+    
 };
 
 use anyhow::Error;
@@ -38,6 +55,12 @@ pub fn get_algorithms() -> Vec<Box<dyn CheatAlgorithm<'static> + Send>> {
         Box::new(AimSnap::new()),
         Box::new(BackTrack::new()),
         Box::new(DoubleTap::new()),
+        Box::new(AutoBackstab::new()),
+        Box::new(InvalidEquipRegion::new()),
+        Box::new(NoSpread::new()),
+        Box::new(Psilent4::new()),
+        Box::new(SilentAim::new()),
+
     ]
 }
 
