@@ -44,7 +44,7 @@ impl<'a> CheatAlgorithm<'a> for DoubleTap {
     }
 
     fn algorithm_name(&self) -> &str {
-        "doubletap"
+        "teltta/doubletap/(experimental)"
     }
 
     fn on_tick(

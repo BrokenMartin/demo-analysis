@@ -46,7 +46,7 @@ impl<'a> CheatAlgorithm<'a> for BackTrack {
     }
 
     fn algorithm_name(&self) -> &str {
-        "backtrack"
+        "teltta/backtrack/(experimental)"
     }
 
     fn on_tick(

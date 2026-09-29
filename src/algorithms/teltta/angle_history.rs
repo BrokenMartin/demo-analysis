@@ -41,7 +41,7 @@ impl<'a> CheatAlgorithm<'a> for AngleHistory {
     }
 
     fn algorithm_name(&self) -> &str {
-        "angle_history"
+        "teltta/angle_history"
     }
 
     fn on_tick(
