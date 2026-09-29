@@ -17,6 +17,7 @@ pub use crate::algorithms::{
         invalid_equip_region::InvalidEquipRegion,
         nospread::NoSpread,
         psilent4::Psilent4,
+        psilent5::Psilent5,
         silent_aim::SilentAim,
     },
     
@@ -59,6 +60,7 @@ pub fn get_algorithms() -> Vec<Box<dyn CheatAlgorithm<'static> + Send>> {
         Box::new(InvalidEquipRegion::new()),
         Box::new(NoSpread::new()),
         Box::new(Psilent4::new()),
+        Box::new(Psilent5::new()),
         Box::new(SilentAim::new()),
 
     ]

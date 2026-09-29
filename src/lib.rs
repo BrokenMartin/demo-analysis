@@ -22,6 +22,7 @@ pub mod algorithms {
         pub mod invalid_equip_region;
         pub mod nospread;
         pub mod psilent4;
+        pub mod psilent5;
         pub mod silent_aim;
     }
     
