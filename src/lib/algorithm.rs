@@ -19,7 +19,6 @@ pub use crate::algorithms::{
         psilent4::Psilent4,
         psilent5::Psilent5,
         silent_aim::SilentAim,
-        duckspeed::DuckSpeed,
     },
     
     
@@ -63,7 +62,6 @@ pub fn get_algorithms() -> Vec<Box<dyn CheatAlgorithm<'static> + Send>> {
         Box::new(Psilent4::new()),
         Box::new(Psilent5::new()),
         Box::new(SilentAim::new()),
-        Box::new(Duckspeed::new()),
 
     ]
 }
