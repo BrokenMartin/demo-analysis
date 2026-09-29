@@ -19,6 +19,7 @@ pub use crate::algorithms::{
         psilent4::Psilent4,
         psilent5::Psilent5,
         silent_aim::SilentAim,
+        duckspeed::CrouchSpeed,
     },
     
     
@@ -46,22 +47,30 @@ use crate::{base::{cheat_analyser_base::CheatAnalyser, demo_handler_base::CheatD
 
 pub fn get_algorithms() -> Vec<Box<dyn CheatAlgorithm<'static> + Send>> {
     vec![
+
         Box::new(AllMessages::new()),
         Box::new(ViewAngles180Degrees::new()),
         Box::new(ViewAnglesToCSV::new()),
         Box::new(WriteToFile::new()),
+        // nocrex algorithms
         Box::new(OOBPitch::new()),
-        Box::new(AngleRepeat::new()),
-        Box::new(AngleHistory::new()),
         Box::new(AimSnap::new()),
+        Box::new(AngleRepeat::new()),
+
+        // teltta algorithms
+        Box::new(AngleHistory::new()),
         Box::new(BackTrack::new()),
         Box::new(DoubleTap::new()),
+
+        // fidoo algorithms
         Box::new(AutoBackstab::new()),
         Box::new(InvalidEquipRegion::new()),
         Box::new(NoSpread::new()),
         Box::new(Psilent4::new()),
         Box::new(Psilent5::new()),
         Box::new(SilentAim::new()),
+        Box::new(BunnyHop::new()),
+        Box::new(CrouchSpeed::new()),
 
     ]
 }
